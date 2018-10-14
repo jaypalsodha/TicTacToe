@@ -16,7 +16,7 @@ public class TicTacToeMain {
         Integer turn;
         int[][] gameBoard = new int[3][3];
 
-        System.out.println("Hi Welcome to Tic Tac Toe Game !!!");
+        System.out.println("Hi welcome to Tic Tac Toe Game !!!");
         System.out.println();
         System.out.print("Please enter the name of Player 1:- ");
         playerA = new Scanner(System.in).next();
