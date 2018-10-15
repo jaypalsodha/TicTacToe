@@ -6,6 +6,7 @@ import static com.toe.Player.SECOND_PLAYER;
 public class Board {
     public static final int TIE = 3;
     private static final int EMPTY = 0;
+    private static final Integer BOARD_SIZE = 3;
     private int[][] board;
 
     public Board(int[][] board) {
@@ -13,8 +14,8 @@ public class Board {
     }
     public void displayBoard(){
         System.out.println("-------------");
-        for(int row = 0;row<3;row++){
-            for(int col= 0;col<3;col++){
+        for(int row = 0;row<BOARD_SIZE;row++){
+            for(int col= 0;col<BOARD_SIZE;col++){
                 System.out.print("|");
                 System.out.print(printValueOnBoard(board[row][col]));
             }
@@ -33,7 +34,7 @@ public class Board {
         }
     }
     public void move(Player player,int positionOnBoard){
-        board[(positionOnBoard-1)/3][(positionOnBoard-1)%3] = player.getPlayerType();
+        board[(positionOnBoard-1)/BOARD_SIZE][(positionOnBoard-1)%BOARD_SIZE] = player.getPlayerType();
     }
 
     public int[][] getBoard() {
