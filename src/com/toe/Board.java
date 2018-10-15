@@ -6,13 +6,13 @@ import static com.toe.Player.SECOND_PLAYER;
 public class Board {
     public static final int TIE = 3;
     private static final int EMPTY = 0;
-    private static final Integer BOARD_SIZE = 3;
+    public static final Integer BOARD_SIZE = 3;
     private int[][] board;
 
-    public Board(int[][] board) {
-        this.board = board;
+    public Board() {
     }
     public void displayBoard(){
+        board = new int[BOARD_SIZE][BOARD_SIZE];
         System.out.println("-------------");
         for(int row = 0;row<BOARD_SIZE;row++){
             for(int col= 0;col<BOARD_SIZE;col++){
@@ -23,8 +23,8 @@ public class Board {
             System.out.println("-------------");
         }
     }
-    private static String printValueOnBoard(int i) {
-        switch (i) {
+    private static String printValueOnBoard(int boardValue) {
+        switch (boardValue) {
             case FIRST_PLAYER:
                 return " X ";
             case SECOND_PLAYER:

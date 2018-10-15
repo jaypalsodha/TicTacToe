@@ -16,7 +16,7 @@ public class Main {
         System.out.print("Please enter the name of Player 1:- ");
         Player secondPlayer = new Player(readInput.nextLine(),Player.SECOND_PLAYER);
 
-        Board board = new Board(new int[3][3]);
+        Board board = new Board();
         board.displayBoard();
 
         GameManager gameManager = new GameManager(board);

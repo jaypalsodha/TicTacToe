@@ -3,6 +3,7 @@ package com.toe;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import static com.toe.Board.BOARD_SIZE;
 import static com.toe.Board.TIE;
 import static com.toe.Player.FIRST_PLAYER;
 import static com.toe.Player.SECOND_PLAYER;
@@ -57,11 +58,11 @@ public class GameManager {
     }
 
     private void putUserMoveOnBoard(int[][] board, int userMove, int turn) {
-        board[(userMove-1)/3][(userMove-1)%3] = turn;
+        board[(userMove-1)/BOARD_SIZE][(userMove-1)%BOARD_SIZE] = turn;
     }
 
     private boolean isPlaceAlreadyField(int move) {
-        return board.getBoard()[(move-1)/3][(move-1)%3] !=0;
+        return board.getBoard()[(move-1)/BOARD_SIZE][(move-1)%BOARD_SIZE] !=0;
     }
 
     private int getUserMove() {
